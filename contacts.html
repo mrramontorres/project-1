@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact List</title>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="page-header">
+      <h1>Friends and Family</h1>
+    </div>
+    <div class="page-header">
+        <div id="header" class="row">
+          <h2>New Contact:</h2>
+        </div>
+      <form id="newContact">
+        <div class="row">
+          <div id="contactType">
+            <label>Select contact type(s):</label>
+              <input type="checkbox" name="contactType" value="family"> Family
+              <input type="checkbox" name="contactType" value="friend"> Friend
+              <input type="checkbox" name="contactType" value="colleague"> Colleague
+              <input type="checkbox" name="contactType" value="other"> Other<br>
+          </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <div class="input-group">
+                  <span class="input-group-addon">First Name: </span>
+                  <input id="firstName" type="text" class="form-control" required>
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="input-group">
+                  <span class="input-group-addon">Last Name: </span>
+                  <input id="lastName" type="text" class="form-control" required>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <div class="input-group">
+                  <span class="input-group-addon">E-mail address: </span>
+                  <input id="email" type="email" size="37" class="form-control">
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="input-group">
+                  <span class="input-group-addon">Phone number:</span>
+                  <input id="phone" type="text" class="form-control">
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="input-group">
+                  <span class="input-group-addon">Pets:</span>
+                  <input id="pets" type="text" class="form-control">
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="input-group">
+                  <span class="input-group-addon">Dislikes:</span>
+                  <input id="dislikes" type="text" class="form-control">
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="input-group">
+                  <span class="input-group-addon">Birthday:</span>
+                  <input id="birthday" type="text" class="form-control">
+                </div>
+              </div>
+             <div class="col-xs-6">
+                <div class="input-group">
+                  <span class="input-group-addon">Likes:</span>
+                  <input id="likes" type="text" class="form-control">
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="input-group">
+                  <span class="input-group-addon">Last spoke on:</span>
+                  <input id="latestconvo" type="text" class="form-control">
+                </div>
+              </div>
+            </div>
+            <button id="addContact" type="submit" class="btn btn-info">Add Contact</button>
+          </form>
+          <button id="editContact" type="submit" class="btn btn-info">Edit Contact</button>
+        </div>
+    </div>
+      <div class="row">
+       <div class="col-md-3 col-md-offset-9" id="display">
+         <label>Display options: </label>
+         <select id="typeOfContact">
+           <option value="all" selected>all contacts</option>
+           <option value="family">only family</option>
+           <option value="friend">only friends</option>
+           <option value="collegague">only colleagues</option>
+           <option value="other">only other</option>
+         </select>
+       </div>
+      </div>
+    <table>
+      <thead>
+        <tr>
+          <th data-sort="lastName" class="col-xs-2 sortable">Last Name</th>
+          <th data-sort="firstName" class="col-xs-2 sortable">First Name</th>
+          <th data-sort="phone" class="col-xs-3 sortable">Phone Number</th>
+          <th data-sort="email" class="col-xs-3 sortable">E-mail Address</th>
+          <th data-sort="Birthday" class="col-xs-2 sortable">Birthday</th>
+          <th data-sort="Pets" class="col-xs-2 sortable">Pets</th>
+          <th data-sort="Likes" class="col-xs-2 sortable">Likes</th>
+          <th data-sort="Dislikes" class="col-xs-2 sortable">Dislikes</th>
+          <th data-sort="Last Spoke On" class="col-xs-2 sortable">Last Spoke On</th>
+          <th class="col-xs-1">Edit</th>
+          <th class="col-xs-1">Delete Contact</th>
+        </tr>
+      </thead>
+      <tbody id="contacts">
+        <tr id="template">
+          <td class="firstName"></td>
+          <td class="lastName"></td>
+          <td class="phone"></td>
+          <td class="email"></td>
+          <td class="birthday"></td>
+          <td class="pets"></td>
+          <td class="likes"></td>
+          <td class="dislikes"></td>
+          <td class="latestconvo"></td>
+          <td><a class="edit">Edit</a></td>
+          <td class="deleteTransaction">
+            <button  type="button" class="btn-sm trashButton">
+              <span class="glyphicon glyphicon-trash"></span>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="row">
+     <div class="col-xs-12" id="footer"></div>
+   </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.0.0/lodash.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
