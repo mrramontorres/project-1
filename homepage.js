@@ -1,3 +1,8 @@
+function toggleSidebar(ref){
+    document.getElementById("sidebar").classList.toggle('active');
+  }
+
+
 let currentDay = document.getElementById("currentDay");
 let DateTime = luxon.DateTime;
 let today = DateTime.local();

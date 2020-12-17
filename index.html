@@ -16,20 +16,23 @@
         <p id="currentDay"></p>
 
     </header>
-    <div class="container">
-        <h1>People I Care About</h1>
-        <div id="buttons-view"></div>
+    <div id="sidebar">
+        <div class="toggle-btn" onclick="toggleSidebar(this)">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>  
+        <div class="list">
+          <div class="item" href="/contacts.html">Your Contacts</div>
+          <div class="item" href="Reminders.html">Reminders</div>
+          <div class="item">About us</div>
+          <div class="item">Contact us</div>
+        </div>
+      </div>
 
-        <form id="friendsFamily-form">
-            <label for="friendsFamily-input">Add a person</label>
-            <input type="text" id="friendsFamily-input"><br>
-      
-            
-            <input id="add-person" type="submit" value="Dont for get to Check on ">
-          </form>
-<div>
+    
 
-    <a class="btn" href="/contacts.html">Your Contacts</a>
+    
 
 </div>
 

@@ -19,6 +19,8 @@ function clickHandler(){
   $("#typeOfContact").change(filterContacts);
 }
 
+
+
 function saveToStorage() {
   localStorage.contacts = JSON.stringify(contacts);
 }
@@ -39,7 +41,7 @@ function addContact(event){
   $("input:checkbox[name=contactType]:checked").each(function(){
     types.push($(this).val());
   });
-
+  
   var contact = {};
   contact["firstName"] = $('#firstName').val();
   contact["lastName"] = $('#lastName').val();
@@ -50,6 +52,7 @@ function addContact(event){
   contact["dislkies"] = $('#dislikes').val();
   contact["birthday"] = $('#birthday').val();
   contact["latestconvo"] = $('#latestconvo').val();
+  contact["notes"] = $('#notes').val();
    contact["types"] = types;
 
   contacts.push(contact);
@@ -79,6 +82,7 @@ function updateList() {
     $contactRow.children(".dislikes").text(contact["dislikes"]);
     $contactRow.children(".birthday").text(contact["birthday"]);
     $contactRow.children(".latestconvo").text(contact["latestconvo"]);
+    $contactRow.children(".notes").text(contact["notes"]);
     return $contactRow;
   });
   $tableBody.append($contacts);
@@ -86,7 +90,7 @@ function updateList() {
 
 function editContact(){
   editing = true;
-  event.preventDefault();
+  //event.preventDefault();
 
   var index = $(this).closest("tr").index();
   var editObj = contacts[index -1];
@@ -100,6 +104,7 @@ function editContact(){
   $('#pets').val(editObj["pets"]);
   $('#birthday').val(editObj["birthday"]);
   $('#latestconvo').val(editObj["latestconvo"]);
+  $('#notes').val(editObj["notes"]);
 
   $('h2').text("Edit Contact:");
   $('#addContact').hide();
@@ -116,6 +121,7 @@ function editContact(){
     editObj["pets"] = $('#pets').val();
     editObj["birthday"] = $('#birthday').val();
     editObj["latestconvo"] = $('#latestconvo').val();
+    editObj["notes"] = $('#notes').val();
     updateList();
     saveToStorage();
     location.reload();
