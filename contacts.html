@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact List</title>
+  <script src="foundation-datepicker.js"></script>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="foundation-datepicker.css">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
+
+</head>
+<body>
+  <div class="container">
+    <div class="page-header">
+      <h1>Friends and Family</h1>
+    </div>
+    <div class="page-header">
+        <div id="header" class="row">
+         
+        </div>
+      <form id="newContact">
+       
+          <div id="contactType">
+            <label>Select contact type(s):</label>
+              <input type="checkbox" name="contactType" value="family"> Family
+              <input type="checkbox" name="contactType" value="friend"> Friend
+              <input type="checkbox" name="contactType" value="colleague"> Colleague
+              <input type="checkbox" name="contactType" value="other"> Other<br>
+          </div>
+          
+                <div class="input-group">
+                  <span class="input-group-addon">First Name: </span>
+                  <input id="firstName" type="text" class="form-control" required>
+                </div>
+            
+             
+                <div class="input-group">
+                  <span class="input-group-addon">Last Name: </span>
+                  <input id="lastName" type="text" class="form-control" required>
+                </div>
+              
+            
+                <div class="input-group">
+                  <span class="input-group-addon">E-mail address: </span>
+                  <input id="email" type="email" size="37" class="form-control">
+                </div>
+              
+         
+                <div class="input-group">
+                  <span class="input-group-addon">Phone number:</span>
+                  <input id="phone" type="text" class="form-control">
+                </div>
+              
+              
+                <div class="input-group">
+                  <span class="input-group-addon">Pets:</span>
+                  <input id="pets" type="text" class="form-control">
+                </div>
+              
+             
+                <div class="input-group">
+                  <span class="input-group-addon">Dislikes:</span>
+                  <input id="dislikes" type="text" class="form-control">
+                </div>
+             
+           
+                <div class="input-group">
+                  <span class="input-group-addon">Birthday:</span>
+                  <input id="birthday" type="text" class="form-control">
+                </div>
+              
+          
+                <div class="input-group">
+                  <span class="input-group-addon">Likes:</span>
+                  <input id="likes" type="text" class="form-control">
+                </div>
+              
+             
+                <div class="input-group">
+                
+                  <input type="text" class="span2" id="dp1">
+                  <script>
+                  $(function(){
+                    $('#dp1').fdatepicker({
+                      initialDate: '02-12-1989',
+                      format: 'mm-dd-yyyy',
+                      disableDblClickSelection: true,
+                      leftArrow:'<<',
+                      rightArrow:'>>',
+                      closeIcon:'X',
+                      closeButton: true
+                    });
+                  });
+                  </script>
+                </div>
+              
+
+            
+                <div class="input-group">
+                  <span class="input-group-addon">Notes</span>
+                  <textarea id="notes" name="notes" >                
+                    </textarea>
+                    <input id="Notes" type="submit" >
+                </div>
+              
+            <button id="addContact" type="submit" class="btn btn-info">Add Contact</button>
+          </form>
+          <button id="editContact" type="submit" class="btn btn-info">Edit Contact</button>
+        </div>
+    </div>
+      
+       
+         <label>Display options: </label>
+         <select id="typeOfContact">
+           <option value="all" selected>all contacts</option>
+           <option value="family">only family</option>
+           <option value="friend">only friends</option>
+           <option value="collegague">only colleagues</option>
+           <option value="other">only other</option>
+         </select>
+       </div>
+      </div>
+    <table>
+      <thead>
+        <tr>
+          <th data-sort="lastName" class=" sortable">Last Name</th>
+          <th data-sort="firstName" class=" sortable">First Name</th>
+          <th data-sort="phone" class=" sortable">Phone Number</th>
+          <th data-sort="email" class=" sortable">E-mail Address</th>
+          <th data-sort="Birthday" class=" sortable">Birthday</th>
+          <th data-sort="Pets" class=" sortable">Pets</th>
+          <th data-sort="Likes" class=" sortable">Likes</th>
+          <th data-sort="Dislikes" class=" sortable">Dislikes</th>
+          <th data-sort="Last Spoke On" class="2 sortable">Last Spoke On</th>
+          <th data-sort="Notes" class="sortable">Notes</th>
+          <th >Edit</th>
+          <th class=>Delete Contact</th>
+        </tr>
+      </thead>
+      <tbody id="contacts">
+        <tr id="template">
+          <td class="firstName"></td>
+          <td class="lastName"></td>
+          <td class="phone"></td>
+          <td class="email"></td>
+          <td class="birthday"></td>
+          <td class="pets"></td>
+          <td class="likes"></td>
+          <td class="dislikes"></td>
+          <td class="latestconvo"></td>
+          <td class="notes"></td>
+          <td><a class="edit">Edit</a></td>
+          <td class="deleteTransaction">
+            <button  type="button" class="btn-sm trashButton">
+              <span class="glyphicon glyphicon-trash"></span>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+   
+  
+   
+  </div>
+
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.0.0/lodash.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
