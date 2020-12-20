@@ -3,26 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <title>Contact List</title>
-  <script src="foundation-datepicker.js"></script>
+  <script src="/foundation-datepicker.js"></script>
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="foundation-datepicker.css">
   <link href="//cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
-   <!-- Foundation Compressed CSS -->
+  <!-- Foundation Compressed CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
   <!-- Foundation Compressed JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
   <!--For Contact Icons-->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="style.css">
 
 <body>
   <!--Foundation Topbar-->
-  <nav class="top-bar topbar-responsive">
+  <nav id="nav" class="top-bar topbar-responsive">
     <div class="top-bar-title">
       <span data-responsive-toggle="topbar-responsive" data-hide-for="medium">
-        <button class="menu-icon" type="button" data-toggle></button>
+        <button class="menu-icon" type="button" data-toggle></button><!--Need to add menu drop down-->
       </span>
       <a class="topbar-responsive-logo" href="#"><strong>Friends & Family</strong></a>
     </div>
@@ -68,63 +68,63 @@
               <span class="input-group-label">
                 <i class="fas fa-user-friends"></i>
               </span>
-              <input class="input-group-field" type="text" placeholder="Full name">
+              <input id="fullName" class="input-group-field" type="text" placeholder="Full name">
             </div>
         
             <div class="input-group">
               <span class="input-group-label">
                 <i class="fas fa-envelope"></i>
               </span>
-              <input class="input-group-field" type="text" placeholder="Email">
+              <input id="email" class="input-group-field" type="text" placeholder="Email">
             </div>
         
             <div class="input-group">
               <span class="input-group-label">
                 <i class="far fa-phone-office"></i>
               </span>
-              <input class="input-group-field" type="text" placeholder="Phone Number">
+              <input id="phone" class="input-group-field" type="text" placeholder="Phone Number">
             </div>
 
             <div class="input-group">
               <span class="input-group-label">
                 <i class="fal fa-birthday-cake"></i>
               </span>
-              <input class="input-group-field" type="text" placeholder="Birthday">
+              <input id= "birthday" class="input-group-field" type="text" placeholder="Birthday">
             </div>
 
             <div class="input-group">
               <span class="input-group-label">
                 <i class="fas fa-dog"></i>
               </span>
-              <input class="input-group-field" type="text" placeholder="Pets">
+              <input id="pets" class="input-group-field" type="text" placeholder="Pets">
             </div>
 
             <div class="input-group">
               <span class="input-group-label">
                 <i class="fas fa-thumbs-down"></i>
               </span>
-              <input class="input-group-field" type="text" placeholder="Dislikes">
+              <input id="dislikes" class="input-group-field" type="text" placeholder="Dislikes">
             </div>
 
             <div class="input-group">
               <span class="input-group-label">
                 <i class="far fa-thumbs-up"></i>
               </span>
-              <input class="input-group-field" type="text" placeholder="Likes">
+              <input id="likes" class="input-group-field" type="text" placeholder="Likes">
             </div>
 
             <div class="input-group">
               <span class="input-group-label">
                 <i class="fas fa-phone-plus"></i>
               </span>
-              <input class="input-group-field" type="text" placeholder="Last Spoken">
+              <input id="latestconvo" class="input-group-field" type="text" placeholder="Last Spoken">
             </div>
 
             <div class="input-group">
               <span class="input-group-label">
                 <i class="fas fa-clipboard"></i>
               </span>
-              <input class="input-group-field" type="text" placeholder="Notes">
+              <input id="notes" class="input-group-field" type="text" placeholder="Notes">
             </div>
           </div>
 
@@ -146,8 +146,7 @@
     <table>
       <thead>
         <tr>
-          <th data-sort="lastName" class=" sortable">Last Name</th>
-          <th data-sort="firstName" class=" sortable">First Name</th>
+          <th data-sort="fullName" class=" sortable">Full Name</th>
           <th data-sort="phone" class=" sortable">Phone Number</th>
           <th data-sort="email" class=" sortable">E-mail Address</th>
           <th data-sort="Birthday" class=" sortable">Birthday</th>
@@ -161,24 +160,7 @@
         </tr>
       </thead>
       <tbody id="contacts">
-        <tr id="template">
-          <td class="firstName"></td>
-          <td class="lastName"></td>
-          <td class="phone"></td>
-          <td class="email"></td>
-          <td class="birthday"></td>
-          <td class="pets"></td>
-          <td class="likes"></td>
-          <td class="dislikes"></td>
-          <td class="latestconvo"></td>
-          <td class="notes"></td>
-          <td><a class="edit">Edit</a></td>
-          <td class="deleteTransaction">
-            <button  type="button" class="btn-sm trashButton">
-              <span class="glyphicon glyphicon-trash"></span>
-            </button>
-          </td>
-        </tr>
+
       </tbody>
     </table> 
   
