@@ -33,6 +33,7 @@ function loadFromStorage() {
 }
 
 function addContact(event){
+  console.log('running');
   event.preventDefault();
   if (editing){
     return;
@@ -43,13 +44,12 @@ function addContact(event){
   });
   
   var contact = {};
-  contact["firstName"] = $('#firstName').val();
-  contact["lastName"] = $('#lastName').val();
-  contact["phone"] = $('#phone').val();
+  contact["fullName"] = $('#fullName').val();
   contact["email"] = $('#email').val();
+  contact["phone"] = $('#phone').val();
   contact["pets"] = $('#pets').val();
   contact["likes"] = $('#likes').val();
-  contact["dislkies"] = $('#dislikes').val();
+  contact["dislikes"] = $('#dislikes').val();
   contact["birthday"] = $('#birthday').val();
   contact["latestconvo"] = $('#latestconvo').val();
   contact["notes"] = $('#notes').val();
@@ -63,28 +63,36 @@ function addContact(event){
 
 function updateList() {
   var $tableBody = $('#contacts');
-  $tableBody.children().not("#template").remove();
+  $tableBody.children().remove();
 
   var $contacts = contacts.map(function(contact) {
-    var $contactRow = $("#template").clone();
+    var $contactRow = $('<tr></tr>')
     $contactRow.removeAttr("id");
 
     var types = contact["types"];
     for (var i = 0; i < types.length; i++){
       $contactRow.addClass(types[i]);
     }
-    $contactRow.children(".firstName").text(contact["firstName"]);
-    $contactRow.children(".lastName").text(contact["lastName"]);
-    $contactRow.children(".phone").text(contact["phone"]);
-    $contactRow.children(".email").text(contact["email"]);
-    $contactRow.children(".pets").text(contact["pets"]);
-    $contactRow.children(".likes").text(contact["likes"]);
-    $contactRow.children(".dislikes").text(contact["dislikes"]);
-    $contactRow.children(".birthday").text(contact["birthday"]);
-    $contactRow.children(".latestconvo").text(contact["latestconvo"]);
-    $contactRow.children(".notes").text(contact["notes"]);
+    $contactRow.append("<td>" + contact["fullName"] + "</td>");
+    $contactRow.append("<td>" + contact["phone"] + "</td>");
+    $contactRow.append("<td>" + contact["email"] + "</td>");
+    $contactRow.append("<td>" + contact["pets"] + "</td>");
+    $contactRow.append("<td>" + contact["likes"] + "</td>");
+    $contactRow.append("<td>" + contact["dislikes"] + "</td>");
+    $contactRow.append("<td>" + contact["birthday"] + "</td>");
+    $contactRow.append("<td>" + contact["latestconvo"] + "</td>");
+    $contactRow.append("<td>" + contact["notes"] + "</td>");
+    $contactRow.append("<td><a class='edit'>Edit</a></td>")
+    $contactRow.append(`<td class="deleteTransaction">
+    <button type="button" class="btn-sm trashButton">
+      <span class="glyphicon glyphicon-trash"></span>
+    </button>
+  </td>`);
     return $contactRow;
   });
+
+
+
   $tableBody.append($contacts);
 }
 
