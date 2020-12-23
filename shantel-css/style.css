@@ -1,4 +1,4 @@
-/*
+
 header {border-bottom: solid;
 border-bottom: solid rgb(58, 56, 56);
 border-width: 2px;
@@ -114,7 +114,7 @@ margin-bottom: 50px;}
     align-content: center;
     border-radius: 5%;
   }
-  */
+  
 
   
 form .form-icons {
@@ -138,6 +138,7 @@ form .form-icons .fa {
   color: white;
   width: 1rem;
 }
+
 
 
 .topbar-responsive {
