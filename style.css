@@ -1,14 +1,18 @@
 
 html { 
-    background: url(images/family.jpg) no-repeat center center fixed; 
+    background: url(images/grandparents.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    background-size: cover; 
 }
 
-body {
+body{
   background: transparent !important;
+}
+
+body.other-page {
+  background: url(images/grandparents.jpg) no-repeat center center fixed;
 }
 
 /*Foundation Form*/
@@ -22,43 +26,30 @@ form .form-icons h4 {
 }
 
 form .form-icons .input-group-label {
-
- /* background-color: transparent;
-  visibility: hidden;
-  opacity: 0.0 - 1.0;
-  border-color: transparent;*/
   background-color: transparent;
-  border-color: transparent;
+  border-color: black;
 }
 
 form .form-icons .input-group-field {
-  border-color: transparent;
+  border-color: black;
   background-color: rgba(0,0,0,0);
-  /*border-color: #1779ba;*/
 }
 
 form .form-icons .fa {
-  /*-color: transparent;*/
   width: 1rem;
   border-color: black;
-  /*color : white*/
 }
 
 /*Foundation Topbar*/
 
-  background-color: #1779ba;
-  border-color: #1779ba;
-}
-
 form .form-icons .input-group-field {
-  border-color: #1779ba;
+  border-color: black;
 }
 
 form .form-icons .fa {
   color: white;
   width: 1rem;
 }
-
 
 #nav {
   background-color: #2c3840;
@@ -132,8 +123,8 @@ form .form-icons .fa {
     padding: 0.25rem 0.45rem;
     top: 50%;
     -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
   }
   .topbar-responsive .top-bar-title span .menu-icon {
     margin-bottom: 4px;
@@ -190,5 +181,30 @@ form .form-icons .fa {
     -webkit-animation: fadeIn 1s ease-in;
             animation: fadeIn 1s ease-in;
   }
+}
+
+/*Icons Size*/
+.fas {
+  font-size: 30px;
+}
+
+.far{
+  font-size: 30px;
+}
+
+.fal{
+  font-size: 30px;
+}
+
+.page-title{
+  text-align: center;
+  text-decoration-color: darkgrey;
+}
+
+.options{
+  font-size: large;
+  font-style:oblique;
+  font-weight: bolder;
+  color:black;
 }
 
