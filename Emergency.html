@@ -3,28 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Emergency Page</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/1.25.0/luxon.min.js" integrity="sha512-OyrI249ZRX2hY/1CAD+edQR90flhuXqYqjNYFJAiflsKsMxpUYg5kbDDAVA8Vp0HMlPG/aAl1tFASi1h4eRoQw==" crossorigin="anonymous"></script>
     <!-- Foundation Compressed CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
     <!-- Foundation Compressed JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="Reminder.css"/>
+    <link rel="stylesheet" href="Emergency.css"/>
 </head>
 <body>
     <!--Foundation Topbar-->
-    <body class="other-page">
-      <!--Foundation Topbar-->
-      <nav id="nav" class="top-bar topbar-responsive">
+    <nav class="top-bar topbar-responsive">
         <div class="top-bar-title">
           <span data-responsive-toggle="topbar-responsive" data-hide-for="medium">
           </span>
-          <a class="topbar-responsive-logo"><strong>Essential Connections</strong></a>
+          <a class="topbar-responsive-logo" href="#"><strong>Essential Connections</strong></a>
         </div>
         <div id="topbar-responsive" class="topbar-responsive-links">
           <div class="top-bar-right">
-            <ul class="menu simple vertical medium-horizontal">
+            <ul class="menu simple vertical medium-horizontal">  
               <li><a href="index.html">Home</a></li>
               <li><a href="contacts.html">Contacts</a></li>
               <li><a href="Reminders.html">Reminders</a></li>
@@ -35,23 +33,4 @@
         </div>
       </nav>
 
-    <div>
-        <div id="cassa"></div>
-        <br>
-        <button id="generate" class="btn">Your People List</button>
-      </div>
-     
-    <br>
-    <br>
-    <br>
-<div id="uselessSibling">
-      <form  method="post" action="">
-        <input type="text" id="email_address" name="name" placeholder="Enter your email address..." required>
-        <button onclick="sendMail(); return false">Yell at Your Sibling</button>
-    </form>
-</div>
-
-
-    <script src="reminders.js"></script>
-</body>
-</html>
+      

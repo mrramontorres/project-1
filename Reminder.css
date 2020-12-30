@@ -161,4 +161,9 @@ body{
   padding-right: 1em;
 }
 
+::placeholder{
+  color: black;
+  opacity: 1;
+  }
+
 

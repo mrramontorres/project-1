@@ -11,9 +11,17 @@ body{
   background: transparent !important;
 }
 
-body.other-page {
-  background: url(images/grandparents.jpg) no-repeat center center fixed;
-}
+.expanded{
+  background-color: transparent;
+  border-color: black;
+  font-size: large;
+  }
+
+
+::placeholder{
+    color: black;
+    opacity: 1;
+    }
 
 /*Foundation Form*/
 
@@ -198,13 +206,21 @@ form .form-icons .fa {
 
 .page-title{
   text-align: center;
-  text-decoration-color: darkgrey;
+  padding-bottom: 10px;
+  padding-top: -0em;
+  font-weight: bold ;
 }
 
 .options{
   font-size: large;
   font-style:oblique;
   font-weight: bolder;
-  color:black;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.type{
+  font-weight: bold;
+  font-size: 30px;
 }
 
