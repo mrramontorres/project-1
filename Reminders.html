@@ -35,23 +35,58 @@
         </div>
       </nav>
 
-    <div>
-        <div id="cassa"></div>
-        <br>
-        <button id="generate" class="btn">Your People List</button>
-      </div>
+   
+    
+      <div id="result">
+        <h1>Your Connections at a Glance</h1>
      
-    <br>
-    <br>
-    <br>
-<div id="uselessSibling">
-      <form  method="post" action="">
-        <input type="text" id="email_address" name="name" placeholder="Enter your email address..." required>
-        <button onclick="sendMail(); return false">Yell at Your Sibling</button>
-    </form>
-</div>
+           </div>
+       
+           
+           <div id="cards">     
+        
+           </div>
+         
+            <div>
+                <div id="cassa"></div>
+                <br>
+                <button id="generate" class="btn">Click the Button for Full Profile</button>
+              </div>
+        
+              <br>
+              <br>
+              <br>
+              <div class="main">
+                <h1>Reminders</h1>
+                <input type="text" placeholder=" Type your reminder here and click enter ;" id="reminder" />
+                
+                <p class="text-info"> Tap on the Reminder to remove </p>
+                <div class="container">
+                  
+                  <div class="incomplete"></div>
+                </div>
+              </div>
+             
+              
+                         
+              
+              
+             
+            <br>
+            <br>
+            <br>
+        <div id="uselessSibling">
+              <form  method="post" action="">
+                <input type="text" id="email_address" name="name" placeholder="Enter your email address..." required>
+                <button id="yell" onclick="sendMail(); return false">Yell at Your Sibling</button>
+            </form>
+        </div>
+        
+        
+            <script src="reminders.js"></script>
+        </body>
+ functions-style
+        </html>
 
+        </html>
 
-    <script src="reminders.js"></script>
-</body>
-</html>
