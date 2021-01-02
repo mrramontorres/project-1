@@ -76,10 +76,10 @@ function updateList() {
     $contactRow.append("<td>" + contact["fullName"] + "</td>");
     $contactRow.append("<td>" + contact["phone"] + "</td>");
     $contactRow.append("<td>" + contact["email"] + "</td>");
+    $contactRow.append("<td>" + contact["birthday"] + "</td>");
     $contactRow.append("<td>" + contact["pets"] + "</td>");
     $contactRow.append("<td>" + contact["likes"] + "</td>");
     $contactRow.append("<td>" + contact["dislikes"] + "</td>");
-    $contactRow.append("<td>" + contact["birthday"] + "</td>");
     $contactRow.append("<td>" + contact["latestconvo"] + "</td>");
     $contactRow.append("<td>" + contact["notes"] + "</td>");
     $contactRow.append("<td><a class='edit'>Edit</a></td>")
@@ -103,25 +103,24 @@ function editContact(){
   var index = $(this).closest("tr").index();
   var editObj = contacts[index -1];
 
-  $('#firstName').val(editObj["firstName"]);
-  $('#lastName').val(editObj["lastName"]);
+  
+  $('#fullName').val(editObj["fullName"]);
   $('#phone').val(editObj["phone"]);
   $('#email').val(editObj["email"]);
+  $('#birthday').val(editObj["birthday"]);
   $('#likes').val(editObj["likes"]);
   $('#dislikes').val(editObj["dislikes"]);
   $('#pets').val(editObj["pets"]);
-  $('#birthday').val(editObj["birthday"]);
   $('#latestconvo').val(editObj["latestconvo"]);
   $('#notes').val(editObj["notes"]);
-
   $('h2').text("Edit Contact:");
   $('#addContact').hide();
   $('#editContact').show();
   $("#editContact").click(makeEdits);
 
   function makeEdits(){
-    editObj["firstName"] = $('#firstName').val();
-    editObj["lastName"] = $('#lastName').val();
+    
+    editObj["#fullName"] = $('#fullName').val();
     editObj["phone"] = $('#phone').val();
     editObj["email"] = $('#email').val();
     editObj["likes"] = $('#likes').val();
