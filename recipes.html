@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Recipe Box</title>
+  
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  
+  <link href="//cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
+
+</head>
+<body>
+  <div class="container">
+    <div class="page-header">
+      <h1>Family Recipes</h1>
+    </div>
+    <div class="page-header">
+        <div id="header" class="row">
+         
+        </div>
+      <form id="newRecipe">
+       
+        
+          
+                <div class="input-group">
+                  <span class="input-group-addon">Recipe Name: </span>
+                  <input id="recipeName" type="text" class="form-control" required>
+                </div>
+                <br>
+                <br>
+             
+                <div class="input-group">
+                  <span class="input-group-addon">You will need: </span>
+                  <TEXTAREA input id="ingredients" name="ingredients" rows="10" cols="80">                   
+                  </TEXTAREA>
+                </div>
+                
+               
+<br>
+<br>
+
+
+                <div class="input-group">
+                  <span class="input-group-addon">Directions: </span>
+                  <TEXTAREA input id="recipeSteps" name="recipeSteps" rows="10" cols="80">                   
+                    </TEXTAREA>
+                 
+                     
+                     
+                    </div>
+             
+              
+            <button id="addRecipe" type="submit" class="btn btn-info">Add Recipe</button>
+          </form>
+          <button id="editRecipe" type="submit" class="btn btn-info">Save Changes</button>
+         
+            <br>
+                     
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <div id = "fullRecipe"></div>
+      
+         
+         <br>
+<br>      
+       
+        
+       </div>
+      </div>
+    <table id="recipeList">
+      <thead>
+        <tr>
+        <!--  <th data-sort="recipeName" class=" sortable">Recipe Name</th>
+          <th data-sort="ingredients" class=" sortable">Ingregients</th>
+          <th data-sort="recipeSteps" class=" sortable">Recipe</th>
+          <th >Edit</th>
+          <th class=>Delete Recipe</th>
+          <th class=>Full Recipe</th>-->
+        </tr>
+      </thead>
+              
+
+          
+      <tbody id="recipes">
+      <!-- <tr id="template"> -->
+          <td class="recipeName"></td>
+          <!--<td class="ingredients"></td>
+          <td class="recipeSteps"></td>-->
+             
+       
+             
+
+          <td><a class="edit">Edit</a></td>
+          <td><a class="fullRecipe">Full Recipe</a></td>
+          <td class="deleteTransaction">
+            <button  type="button" class="btn-sm trashButton">
+              <span class="glyphicon glyphicon-trash"></span>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+   
+  
+   
+  </div>
+
+  
+
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.0.0/lodash.min.js"></script>
+  <script src="recipes.js"></script>
+ 
+</body>
+</html>
