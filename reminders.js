@@ -1,4 +1,5 @@
  
+ 
 var names =  JSON.parse(localStorage.getItem('contacts'));
 names.forEach(function(key){
 console.log(names);
@@ -55,6 +56,11 @@ $('#generate').click(function() {
       console.log(index);
       createCard(index);
           
+ functions-style
+  });
+  
+  });
+
   });
   
   });
@@ -62,6 +68,42 @@ $('#generate').click(function() {
 
   checkreminders();
 
+function checkreminders() {
+
+  let dataInLocalStorage = localStorage.getItem("reminders");
+ main
+
+  if (dataInLocalStorage == null) {
+    reminders = [];
+  } else {
+    reminders = JSON.parse(dataInLocalStorage);
+  }
+  let html = "";
+  reminders.forEach((reminder, index) => {
+    html += `<div class='card' onclick='removereminder(${index});'>${reminder}</div>`;
+  });
+  $(".incomplete").empty().append(html);
+}
+
+$("input").on("keypress", (e) => {
+  if (e.which === 13 && $("input").val() !== "") {
+    reminder = $("input").val();
+    let remindersData = localStorage.getItem("reminders");
+    if (remindersData == null) {
+      reminders = [];
+    } else {
+      reminders = JSON.parse(remindersData);
+    }
+    reminders.push(reminder);
+    localStorage.setItem("reminders", JSON.stringify(reminders));
+    $("input").val("");
+    checkreminders();
+  }
+});
+
+  checkreminders();
+
+ functions-style
 function checkreminders() {
 
   let dataInLocalStorage = localStorage.getItem("reminders");
@@ -103,6 +145,16 @@ let removereminder = (index) => {
   checkreminders();
 };
 
+
+let removereminder = (index) => {
+  let remindersData = localStorage.getItem("reminders");
+  reminders = JSON.parse(remindersData);
+  reminders.splice(index, 1);
+  localStorage.setItem("reminders", JSON.stringify(reminders));
+  checkreminders();
+};
+
+ main
   
 function sendMail() {
   var link = 'mailto:hello@domain.com?subject=Message from '
