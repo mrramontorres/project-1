@@ -41,6 +41,91 @@ transition: color 0.15s ease-in;
 color: #c6d1d8;
 }
 
+#result{ 
+  
+ margin: auto;
+  margin-top: 20px;
+  border-radius: 7px;
+  width: 60%;
+  background-color: aliceblue;
+  padding-top: 30px;
+  padding-left: 25px;
+  box-shadow:12px 12px 2px 1px rgb(141, 141, 158);}
+
+  #cards{
+margin: auto;
+    margin-top: 40px;
+    width: 60%;
+    border-radius: 7px;
+    background-color: aliceblue;
+    padding-left: 25px;
+    box-shadow:12px 12px 2px 1px rgb(141, 141, 158);
+
+  }
+#generate{
+  border: solid grey 1px;
+  border-radius: 7px;
+  box-shadow:12px 12px 2px 1px rgb(141, 141, 158);
+  margin-left: 50%;
+  margin-top: 20px;
+  background-color: aliceblue; 
+padding: 20px;}
+
+#generate.btn{
+  background-color: rgb(79, 79, 148);
+  color: cornsilk;
+padding: 10px;
+margin-left: 400px;
+border-radius: 5px;
+box-shadow:16px 16px 3px 2px rgb(32, 31, 31);}
+
+#generate:hover {box-shadow:16px 16px 3px 2px rgb(32, 31, 31);
+}
+#cassa {
+  border: rgb(68, 68, 114);
+  border-radius: 5px;
+  box-shadow: rgb(34, 34, 68);
+margin: auto;
+  margin-top: 40px;
+  width: 60%;
+background-color: aliceblue;
+align-content: center;
+}
+
+.main{  margin:auto;
+  margin-top: 20px;
+ width: 60%;
+ border-radius: 5px;
+  background-color: aliceblue;
+padding:20px;
+box-shadow:12px 12px 2px 1px rgb(141, 141, 158);}
+
+
+  #uselessSibling {  
+    padding: 15px;
+    margin: auto;
+    margin-top: 20px;
+    width: 40%;
+    background-color: aliceblue;}
+
+    #yell {background-color: rgb(79, 79, 148);
+    color: cornsilk;
+  padding: 10px;
+  margin: auto;
+border-radius: 5px;
+box-shadow:16px 16px 3px 2px rgb(32, 31, 31);}
+
+
+    .news {margin-top: 10px;
+      font-style: italic;   
+  color:rgb(92, 91, 91);}
+    .topArt {
+      margin-top: 10px;
+      color:rgb(92, 91, 91);
+     }
+h4 {font-family: 'Times New Roman', Times, serif;}
+
+
 @media screen and (max-width: 39.9375em) {
 .topbar-responsive .menu a {
   padding: 0.875rem 0;

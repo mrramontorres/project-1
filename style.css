@@ -140,48 +140,7 @@ form .form-icons .fa {
 }
 
 
-#cassa {
-  border: rgb(68, 68, 114);
-  border-radius: 5px;
-  box-shadow: rgb(34, 34, 68);
-  margin-left: 20px;
-  width: 40%;
-background-color: aliceblue;
-}
 
-#result{ 
-  margin-left: 20px;
-  margin-top: 20px;
-  width: 40%;
-  background-color: aliceblue;}
-
-  #cards{
-    margin-left: 20px;
-    margin-top: 20px;
-    width: 40%;
-    background-color: aliceblue;
-
-  }
-#generate{
-  margin-left: 20px;
-    margin-top: 20px;
-  background-color: aliceblue; 
-padding: 10px;}
-
-.main{  margin-left: 20px;
-  margin-top: 20px;
-  width: 40%;
-  background-color: aliceblue;}
-
-  #uselessSibling {  
-    padding: 15px;
-    margin-left: 20px;
-    margin-top: 20px;
-    width: 40%;
-    background-color: aliceblue;}
-
-    #yell {background-color: blue;
-    color: cornsilk;}
 
 
 @-webkit-keyframes fadeIn {

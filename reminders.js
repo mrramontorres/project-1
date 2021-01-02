@@ -1,5 +1,4 @@
  
- 
 var names =  JSON.parse(localStorage.getItem('contacts'));
 names.forEach(function(key){
 console.log(names);
@@ -12,7 +11,7 @@ $("#result").append(key.fullName + ":" + "  " + key.phone + '<br>' + "<br>");
 function createCard(index) {
   $('#cards').empty();
 
-var par1 =  $("<p></p>").text("Full Name : "+ names[index].fullName);
+var par1 =  $("<h3></h3>").text(names[index].fullName);
 var par2 =  $("<p></p>").text("Telephone : "+ names[index].phone);
 var par3 =  $("<p></p>").text("Email : "+ names[index].email);
 var par4 =  $("<p></p>").text("Pets : "+ names[index].pets);
@@ -56,11 +55,6 @@ $('#generate').click(function() {
       console.log(index);
       createCard(index);
           
- functions-style
-  });
-  
-  });
-
   });
   
   });
@@ -68,42 +62,6 @@ $('#generate').click(function() {
 
   checkreminders();
 
-function checkreminders() {
-
-  let dataInLocalStorage = localStorage.getItem("reminders");
- main
-
-  if (dataInLocalStorage == null) {
-    reminders = [];
-  } else {
-    reminders = JSON.parse(dataInLocalStorage);
-  }
-  let html = "";
-  reminders.forEach((reminder, index) => {
-    html += `<div class='card' onclick='removereminder(${index});'>${reminder}</div>`;
-  });
-  $(".incomplete").empty().append(html);
-}
-
-$("input").on("keypress", (e) => {
-  if (e.which === 13 && $("input").val() !== "") {
-    reminder = $("input").val();
-    let remindersData = localStorage.getItem("reminders");
-    if (remindersData == null) {
-      reminders = [];
-    } else {
-      reminders = JSON.parse(remindersData);
-    }
-    reminders.push(reminder);
-    localStorage.setItem("reminders", JSON.stringify(reminders));
-    $("input").val("");
-    checkreminders();
-  }
-});
-
-  checkreminders();
-
- functions-style
 function checkreminders() {
 
   let dataInLocalStorage = localStorage.getItem("reminders");
@@ -145,16 +103,6 @@ let removereminder = (index) => {
   checkreminders();
 };
 
-
-let removereminder = (index) => {
-  let remindersData = localStorage.getItem("reminders");
-  reminders = JSON.parse(remindersData);
-  reminders.splice(index, 1);
-  localStorage.setItem("reminders", JSON.stringify(reminders));
-  checkreminders();
-};
-
- main
   
 function sendMail() {
   var link = 'mailto:hello@domain.com?subject=Message from '
@@ -163,3 +111,60 @@ function sendMail() {
   window.location.href = link;
 }
 
+var APIKey = "cPMwVOzEb0RReABo0SIDMV1p0GCvlbH1";
+
+// Here we are building the URL we need to query the database
+var queryURL = "https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=" + APIKey;
+
+// Here we run = AJAX call to the NewYorkTimes API
+$.ajax({
+    url: queryURL,
+    method: "GET"
+  })
+    // We store all of the retrieved data inside of an object called "response"
+    .then(function(response) {
+
+        // Log the queryURL
+        console.log(queryURL);
+
+         // Log the resulting object
+         console.log(response);
+
+         // Log the test for title within object
+         console.log(response.results[0].title);
+
+        // Created a variable to hold the title
+        var title = response.results[0].title
+
+        // Transfer content to HTML
+        $(".news").html( "<h4>" + "Today in the World:  "+title + "</h4>");
+    })
+
+var APIKey = "Qm6AdGgl5qsYFDCGGzHkRahy4MUt6MHt";
+
+// Here we are building the URL we need to query the database
+var queryURL2 = "https://api.nytimes.com/svc/topstories/v2/us.json?api-key=" + APIKey;
+
+// Here we run = AJAX call to the NewYorkTimes API
+$.ajax({
+    url: queryURL2,
+    method: "GET"
+  })
+    // We store all of the retrieved data inside of an object called "response"
+    .then(function(response2) {
+
+        // Log the queryURL
+        console.log(queryURL2);
+
+         // Log the resulting object
+         console.log(response2);
+
+         // Log the test for abstract within object
+         console.log(response2.results[0].abstract);
+
+        // Created a variable to hold the abstract
+        var abstract = response2.results[0].abstract
+
+        // Transfer content to HTML
+        $(".topArt").html("<h4>" + "Today in the US News: "+ abstract + "</h4>");
+    })
