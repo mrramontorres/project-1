@@ -146,11 +146,23 @@ form .form-icons .input-group-field {
   }
     
   
-      /*Background Image*/
+/*Background Image*/
     .page-header{
         border: none;
     }
   
   body {
     background: url(images/emergency-4.jpg) no-repeat;
+    background-size: cover;
+  }
+
+/*table styling */
+  #template td {
+      border-style: inset;
+      border-width: 3px;
+      background-color: rgb(226, 226, 226);
+  }
+
+  .formLabels {
+      background-color: white;
   }
