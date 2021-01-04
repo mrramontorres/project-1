@@ -160,9 +160,28 @@ form .form-icons .input-group-field {
   #template td {
       border-style: inset;
       border-width: 3px;
-      background-color: rgb(226, 226, 226);
+      background-color: transparent;
+      opacity: 0.5;
   }
 
   .formLabels {
-      background-color: white;
+      background-color:transparent;
+      opacity: 0.5;
+      border-color: black;
+      
+  }
+
+  .form-control {
+    background-color: transparent;
+    opacity: 0.5;
+  }
+
+  .page-header {padding-bottom: 70px;}
+
+  #newContact {
+    padding-left: 10px;
+  }
+
+  #editContact {
+    padding-left: 25px;
   }

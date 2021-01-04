@@ -33,6 +33,14 @@ font-size: large;
 
 /*Foundation Form*/
 
+form {
+  z-index: -1;
+  display: block;
+  opacity: 0.5;
+  background-color: white;
+  padding-right: 10px;
+}
+
 form .form-icons {
 text-align: center;
 }

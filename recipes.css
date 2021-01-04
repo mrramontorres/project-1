@@ -18,10 +18,22 @@ html {
   filter: brightness(1);
 }
 
+#fullRecipe{background-color: rgb(250, 231, 209);
+  width: 60%;
+  box-shadow: rgb(148, 123, 89);
+  padding: 30px;
+  margin: auto;
+  border-radius: 5px;
+  }
+
 body{
   background: transparent !important;
 }
 
+.input-group {
+  background-color: transparent;
+  opacity: 0.8;
+}
 
 /*Foundation Topbar*/
 
