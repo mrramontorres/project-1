@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Reminders</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/1.25.0/luxon.min.js" integrity="sha512-OyrI249ZRX2hY/1CAD+edQR90flhuXqYqjNYFJAiflsKsMxpUYg5kbDDAVA8Vp0HMlPG/aAl1tFASi1h4eRoQw==" crossorigin="anonymous"></script>
+   
     <!-- Foundation Compressed CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
     <!-- Foundation Compressed JavaScript -->
@@ -14,31 +14,34 @@
 </head>
 <body>
     <!--Foundation Topbar-->
-    <body class="other-page">
-      <!--Foundation Topbar-->
-      <nav id="nav" class="top-bar topbar-responsive">
-        <div class="top-bar-title">
-          <span data-responsive-toggle="topbar-responsive" data-hide-for="medium">
-          </span>
-          <a class="topbar-responsive-logo"><strong>Essential Connections</strong></a>
+    <nav id="nav" class="top-bar topbar-responsive">
+      <div class="top-bar-title">
+        <span data-responsive-toggle="topbar-responsive" data-hide-for="medium">
+        </span>
+        <a class="topbar-responsive-logo"><strong>Essential Connections</strong></a>
+      </div>
+      <div id="topbar-responsive" class="topbar-responsive-links">
+        <div class="top-bar-right">
+          <ul class="menu simple vertical medium-horizontal">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contacts.html">Contacts</a></li>
+            <li><a href="Reminders.html">Reminders</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="Emergency Contacts.html">Emergency</a></li>
+          </ul>
         </div>
-        <div id="topbar-responsive" class="topbar-responsive-links">
-          <div class="top-bar-right">
-            <ul class="menu simple vertical medium-horizontal">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="contacts.html">Contacts</a></li>
-              <li><a href="Reminders.html">Reminders</a></li>
-              <li><a href="#">Recipes</a></li>
-              <li><a href="Emergency.html">Emergency</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      </div>
+    </nav>
 
+      <div class="news">Your Local News</div>
+
+
+      <div class="topArt">Your Local News</div>
+      
    
     
       <div id="result">
-        <h1>Your Connections at a Glance</h1>
+        <h4>Your Connections at a Glance</h4>
      
            </div>
        
@@ -54,11 +57,10 @@
               </div>
         
               <br>
-              <br>
-              <br>
+              
               <div class="main">
-                <h1>Reminders</h1>
-                <input type="text" placeholder=" Type your reminder here and click enter ;" id="reminder" />
+                <h3>Reminders</h3>
+                <input type="text" placeholder=" Type your reminder here and click enter: " id="reminder" />
                 
                 <p class="text-info"> Tap on the Reminder to remove </p>
                 <div class="container">
@@ -66,14 +68,8 @@
                   <div class="incomplete"></div>
                 </div>
               </div>
-             
-              
-                         
-              
-              
-             
-            <br>
-            <br>
+
+           
             <br>
         <div id="uselessSibling">
               <form  method="post" action="">
@@ -81,12 +77,8 @@
                 <button id="yell" onclick="sendMail(); return false">Yell at Your Sibling</button>
             </form>
         </div>
-        
-        
+     
+
             <script src="reminders.js"></script>
         </body>
- functions-style
         </html>
-
-        </html>
-
