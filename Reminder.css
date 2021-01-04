@@ -100,6 +100,10 @@ align-content: center;
 padding:20px;
 box-shadow:12px 12px 2px 1px rgb(141, 141, 158);}
 
+#nav{
+  font-size: 20px;
+}
+
 
   #uselessSibling {  
     padding: 15px;
